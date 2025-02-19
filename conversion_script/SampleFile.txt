@@ -1,0 +1,13 @@
+hello world
+This file contains some dummy datareplaced
+dummy
+GeeksForGeeks
+dummy
+
+---
+
+<!-- _class: title-body -->
+# Outline
+
+
+<box-half-left>

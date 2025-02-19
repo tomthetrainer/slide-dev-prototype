@@ -1,0 +1,168 @@
+:root {
+  /* default theme color */
+  /* can be overrided by uses `themeConfig` option */
+  --slidev-theme-primary: #5d8392;
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+  /*
+  background-image: url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg");
+  */
+  background-image: url("../assets/intro_background.svg");
+  background-size: cover;
+
+  /*
+  backgroundImage: url${require('../assets/background.svg')};
+  */
+
+  h1 {
+    @apply text-6xl leading-20;
+    color: #ded9ff;
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+    color: #ded9ff;
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
+
+.font-700 {
+  color: #ded9ff;
+}
+
+
+/********************* 
+MAIN CONTENT Half SLIDE CSS
+
+********************/
+
+.slidev-layout.main {
+  @apply h-full grid;
+  background-image: url("../assets/content_background.svg");
+  background-size: cover;
+
+
+  h1 {
+    @apply text-6xl leading-20;
+    
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+   
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
+
+
+/********************* 
+MAIN CONTENT SLIDE FULL CSS
+
+********************/
+
+.slidev-layout.main_full {
+  @apply h-full grid;
+  background-image: url("../assets/content_background_full.svg");
+  background-size: cover;
+
+
+  h1 {
+    @apply text-6xl leading-20;
+    
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+   
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
+
+/********************* 
+MAIN CONTENT two-columns
+
+********************/
+
+.slidev-layout.two-columns {
+  @apply h-full grid;
+  background-image: url("../assets/content_background_full.svg");
+  background-size: cover;
+
+
+}
+
+/********************* 
+Header + two-columns
+
+********************/
+
+.slidev-layout.two-cols-header {
+  @apply h-full grid;
+  background-image: url("../assets/content_background_full.svg");
+  background-size: cover;
+
+
+}
+
+.slidev-layout.section {
+  @apply h-full grid;
+  /*
+  background-image: url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg");
+  */
+  background-image: url("../assets/intro_background.svg");
+  background-size: cover;
+
+  /*
+  backgroundImage: url${require('../assets/background.svg')};
+  */
+
+  h1 {
+    @apply text-6xl leading-20;
+    color: #ded9ff;
+  }
+
+  /* apply style to all ps
+  had been h1 + p, apply to just one p
+  */
+
+  h1 ~ p {
+    @apply -mt-2 opacity-50 mb-4;
+    color: #ded9ff;
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
+
+.font-700 {
+  color: #ded9ff;
+}
+
+.slidev-layout.center {
+  @apply h-full grid;
+  background-image: url("../assets/content_background_full.svg");
+  background-size: cover;
+
+
+}
