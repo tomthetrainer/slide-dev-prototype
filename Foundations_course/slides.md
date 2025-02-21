@@ -1,27 +1,25 @@
 ---
 theme: ./kurrent_2025
+fonts:
+  # basically the text
+  sans: Work Sans
+  # use with `font-serif` css class from UnoCSS
+  serif: Robot Slab
+  # for code blocks, inline code, etc.
+  mono: Fira Code
 ---
 
 ---
 layout: cover
 ---
 
-
-
 # KurrentDB Overview
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # In This Section You Will Learn how to:
-
-
-
 
 * Differentiate the unique functionality of KurrentDB from other systems
 * Install KurrentDB from a binary distribution
@@ -29,19 +27,6 @@ layout: main_full
 * Configure stream settings to delete old events
 * Use the EventStorDB webui
 
-
----
-layout: two-cols
----
-
-# Left
-
-This shows on the left
-
-::right::
-
-
-This shows on the right
 
 ---
 layout: two-cols-header
@@ -78,12 +63,11 @@ layout: two-cols-header
 * Write path
 
 ---
-layout: two-cols-header
+layout: main-full
 ---
 
 # Outline
 
-::left::
 * Read path
 * System streams
 * Stream access control
@@ -91,30 +75,21 @@ layout: two-cols-header
 * Lab (optional): Stress test the server 
 
 
-
-
 ---
 layout: section
 ---
-
 
 # KurrentDB Overview
 
 ## 
 
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # KurrentDB
 
-
-
 **Designed for event-native applications, KurrentDB immutably stores every event to provide:**  
-
-
 
 * Context rich business data 
 * Decoupled complex systems 
@@ -122,16 +97,11 @@ layout: main_full
 * Contextual, real-time insights
 * Future proofed architecture
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # KurrentDB Server: Deployment Options
-
-
 
 **KurrentDB**
 
@@ -141,10 +111,11 @@ layout: main_full
 * Enterprise Offerings
 * Self-managed on-prem or cloud
 
+---
+layout: main-full
+---
 
-
-
-**KurrentDB Cloud**
+# KurrentDB Cloud 
 
 * AWS, Azure, Google
 * Security and Compliance
@@ -152,19 +123,13 @@ layout: main_full
 * Managed Service
 
 
+---
+layout: main-full
+---
 
+# KurrentDB Clients
 
-
- ---
-
- 
- # KurrentDB Clients
- 
- 
- 
-
-
- **GRPC based clients**
+**GRPC based clients**
 
 * Node.js
 * .NET
@@ -173,57 +138,37 @@ layout: main_full
 * Rust
 * Go
 
+---
+layout: main-full
+---
  
+# HTTP API 
 
-
-
- 
- **HTTP API**
-
- * Read/Write events
- * Admin functions
- * Add users/groups
- * Enable/Disable features
- * Retrieve logs/metrics
-
-
-
+* Read/Write events
+* Admin functions
+* Add users/groups
+* Enable/Disable features
+* Retrieve logs/metrics
 
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # KurrentDB
-
-
-
 
 **Builds Data Immutability**
 KurrentDB stores data as a series of immutable events over time to provide for greater data integrity and transparency.
 
-
-
 **Decouples Core Logic**
 With KurrentDB you can decouple your external systems with asynchronous messaging making your system cleaner and more compact.
-
-
 
 **Creates a Source of Truth**
 Events in KurrentDB are stored as a reliable log of the changes in your application. 
 
 
-
-
-
 ---
 layout: section
 ---
-
-
-
-  
- 
 
     
 
@@ -233,41 +178,25 @@ layout: section
 ## 
 
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Key Concepts
 
-
-
-
-
 When using any database (SQL, Document, NoSQL, or KurrentDB), its critical to understand the tools available to: 
-
-
 
 * Manage potential conflicts between multiple readers and writers
 * Enforce constraints
 * Retrieve data or subsets of data
 * Deletion process
 
-
-
 This section discusses those concepts and compares KurrentDB to other types of databases.   
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # How Data is Stored
-
-
-
 
 Some systems store data as a document that can be read and rewritten as a new version. Others store data as a table with a collection of rows containing typed columns. 
 
@@ -278,23 +207,13 @@ This section breaks down the topic into:
 * Schemas
 * Pub-sub functionality
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # KurrentDB: Unit of Data Storage
 
-
-
-
 **Comparing databases and their basic units of storage**
-
-
 
 
 | Database Type | Base Unit of Storage| 
@@ -305,33 +224,20 @@ layout: main_full
 |KurrentDB| Events |
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Event Details
-
-
-
 
 * Appended in order to a stream
 * Immutable
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Comparison by Supported Operations
-
-
 
 
 Some systems allow granular updates/deletes.  Others group data into subsets and allow granular updates/deletes on those subsets. 
@@ -341,20 +247,15 @@ Some systems allow updates of previously written data in place.  Others replace 
 The following slide(s) summarize those differences
 
 
-
-
 <!-- Instructor Note
 This is key to enabling proper understanding and use of KurrentDB, certain classes may already understand the differences, but it is critical to have a baseline understanding, go as deep or as shallow as the class requires  -->
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
-
 # Overview of KurrentDB, Supported Operations
-
-
 
 
 | Database Type| Supported Operations |
@@ -366,9 +267,8 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Schemas
 
@@ -381,26 +281,17 @@ layout: main_full
 * Data Lakes *(Typically SQL layers over semi-structured distributed storage)* 
 
 
-
-
-
 **KurrentDB**
 
 * KurrentDB neither manages or enforces schemas
 * Schema enforcement/management is the responsibility of the application
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
-
 
 # Reading Data
-
 
 |Database Type | Read Path | Subscriptions |
 |--------------|-----------|---------------|
@@ -409,20 +300,11 @@ layout: main_full
 | KurrentDB | Read Stream/projection sequentially forwards/backwards | Subscriptions to streams/projections |
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
-
 
 # Data Transformations on Write
-
-
-
 
 |Database Type | Write Transformation | 
 |--------------|-----------|
@@ -432,28 +314,19 @@ layout: main_full
 | KurrentDB | Projections |
 
 
-
-
-
 ---
 layout: section
 ---
-
-    
 
 # Events & Streams
 
 ##
 
 ---
-layout: main_full
+layout: main-full
 ---
 
-
-
 # Introduction to Events and Streams
-
-
 
 
 Since KurrentDB Stores immutable events appended to streams, lets start with a review of each item. 
@@ -462,16 +335,11 @@ Since KurrentDB Stores immutable events appended to streams, lets start with a r
 * Streams
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Events
-
-
 
 
 **General definition**
@@ -479,48 +347,29 @@ layout: main_full
 Events are schema-less, immutable bytes appended in order and guaranteed to be retrieved in that order. 
 
 
-
 **The nuance of events**
 
 Events represent meaningful actions that happened at a specific time and altered the state of a business entity. Events can contain all the relevant information about the action or decision that occurred, allowing future systems or services to understand the circumstances in which the event happened. 
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Events: Bytes or JSON
-
-
-
-
 
 
 Events are stored as **bytes**, but frequently JSON format is used. 
 
 
-
 Some internal KurrentDB subsystems expect, or generate, JSON formatted events. 
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Events Review
-
-
-
-
-
-
 
 Events are:
 * Immutable
@@ -529,22 +378,14 @@ Events are:
 * Stored in a stream 
 
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Streams
 
 
-
-
 Events are sequentially organized into logical streams containing related events.
-
 
 
 Streams are:
@@ -553,49 +394,27 @@ Streams are:
 * Unit of consistency guarantees
 * Created when an event is appended to it
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Fine-grained Streams
 
 
-
-
 A well designed KurrentDB application will typically revolve around a collection of fine grained streams. 
 
-
-
-
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Streams:  Subscribable
 
-
-
-
 KurrentDB in addition to storing immutable, consistently ordered events also has pub-sub funcionality
-
-
 
 **Subscription Levels**
 * $all stream
 * Individual stream
 * Projection
-
-
-
 
 ---
 layout: section
@@ -608,63 +427,36 @@ KurrentDB supports an Optimistic Concurrency Check on appends.
 This Module will demobnstrate the available features.
 
 ---
-layout: main_full
+layout: main-full
 ---
-
-
-
-
-
-
-
 
 # Optimistic Concurrency Control Defined
 
-
-
 Instead of locking first in order to guarantee success of a transaction, OCC assume success (that is the optimistic part) and fails the transaction if a conflict is detected.
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Pessimistic Concurrency Control Defined
 
-
-
 Lock the record for your exclusive use until you have finished with it.
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
-
 
 # When are the Concurrency checks made?
-
 
 
 The concurrency check is defined on the write of an event. If the concurrency check fails then the write of that event fails.
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Available Settings
-
 
 
 * Any Integer Value (`expectedRevision: n`)
@@ -676,18 +468,11 @@ layout: main_full
 * `ExpectedVersion.Any` / `StreamState.Any`
    * *Disables* concurrency Check        
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Event ID
-
-
 
 Although not specifically a concurrency check, you should be aware that
 
@@ -697,188 +482,110 @@ Although not specifically a concurrency check, you should be aware that
 * Best practice is to generate and manage the Event ID in your application.
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Use Case for this example
-
-
-
-
 
 Issue/support ticket management system
 
 * Streamname = Support ticket id
 * EventTypes [TicketCreate, TicketComment, TicketAssigned, TicketClosed]
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
 
 # Example Stream
 
-
-
+<img src="./assets/stream.png" alt="stream" width="1000" >
 
 ---
 layout: section
 ---
-
 
 # Examples 
 
 The following slides are examples of each of the settings
 
 
-<!-- 
-In the following slides we will review examples of each setting.
-
- -->
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Integer Value
-
-
 
 * This is the most commonly used setting for most applications.
 * It is typically used to guarantee the state of the stream has not changed between the time that you read and the time that you write.
 
 
-
-
-
-
 ---
-layout: main_full
+layout: center
 ---
 
+<img src="./assets/Integer_Value_support_ticket.jpg" width="700">
 
+---
+layout: main-full
+---
 
 # Use Case
-
-
 
 * A stream is created when a user fills out a web form to open a support ticket. 
 * Any one of the Support Engineers can view the ticket and assign it to themselves. 
 * When closing a ticket the it is important that the support engineer has read all the issues present in the stream. Using ExpectedVersion.(Integer) can guarantee that. 
 
 
-
 * Bonus Question: Which other EventType in this use case would use expected.Version = integerValue
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
-
-
-
-
-![width:800px](./media/Integer_Value_support_ticket.jpg)
-
-
-
----
-layout: main_full
----
-
-
 
 # No Stream
-
-
 
 Specifies the expectation that the target stream does not yet exist.
 
 
-
-<!-- 
- -->
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Use Case
-
 
 * Used when you want your application to create a new stream, by appending an event to it. If a stream of that name has already been created you want the operation to fail.
 * For our ticketing system application this might be used when the customer first creates the ticket. 
 
 
-
 <!-- 
 In our use case of support tickets multiple customers may be using the application at once. If our application issues ticket numbers incrementally, for example ticket_01, ticket_02, ticket_03 etc. In that case if there is a race condition to create ticket_04, one operation will succeed, and the other will have to retry.
-
- -->
-
----
-layout: main_full
----
-
-
- 
-
-
-
-
-
-
-
+-->
 
 ---
-layout: main_full
+layout: center
 ---
 
 
+<img src="./assets/NoStream_support_ticket.jpg" width="700">
+
+---
+layout: main-full
+---
 
 # Stream Exists
 
-
-
 Specifies the expectation that the target stream or its metadata stream has been created, but does not expect the stream to be at a specific event number.
-
-
 
 <!-- The Stream Exists Concurrency check sets the expectation that the stream your application is appending an event to, must already exist.
 -->
 
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Use Case
-
 
 You would use this when you want to guarantee the stream exists before writing your event. 
 
@@ -888,74 +595,43 @@ Multiple comment events from multiple sources could be appended to the stream wi
 
 The risk is that TicketComment events might be appended after a TicketClosed event. 
 
-
-
 ---
-layout: main_full
+layout: center
 ---
-
 
 <img src="./assets/Stream_exists_support_ticket.jpg" style="width:700px;" />
 
 
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Expected Version Any
-
-
 
 * Disables concurrency check
 * This is the most liberal setting
 * It is often used for examples and demos, but in most cases your application will want to perform some sort of check
 
 
-
-
 ---
-layout: main_full
+layout: center
 ---
 
-
-
-
-
-
-
-
-
-
-
-<!-- 
-This diagram shows what would happen if our support ticket system disabled concurrency checks on comment added events. 
-
-As you see a ticket stream may be  created that starts with a Comment Added event rather than a ticket created event.
- -->
+<img src="./assets/ExpectedVersionAny_support.jpg" style="width:700px;" />
 
 ---
 layout: cover
 ---
-
-    
 
 # Deleting Events
 
 Stream Configuration
 
 ---
-layout: main_full
+layout: main-full
 ---
 
-
-
 # Event Removal Triggers
-
-
-
 
 * Stream Deletion
     * Hard
@@ -965,23 +641,16 @@ layout: main_full
     * MaxCount    
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Stream Configuration
-
-
 
 
 Each stream has an optional metadata stream for configuration
 
 \$$<Stream_Name>
-
 
 Commonly used stream settings:
 
@@ -995,27 +664,18 @@ Commonly used stream settings:
     * Access Control List
 
 
-
-
-
 ---
 layout: section
 ---
 
 # KurrentDB Internals
 
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # KurrentDB Internals: Event Management
 
-
-
- 
 
 * KurrentDB is a sequenced log of events
 * As events are written, they are appended to a global log
@@ -1026,23 +686,17 @@ layout: main_full
 * LSM(Log Structured Merge Tree) structure 
 
 
-
-
 ---
 layout: center
 ---
-
-
 
 # Streams Illustrated
 
 <img src="./assets/all_stream.png" alt="streams"  style="width:500px;">
 
-
 ---
 layout: center
 ---
-
 
 # Streams Illustrated
 
@@ -1052,17 +706,13 @@ layout: center
 layout: center
 ---
 
-
 # Streams Illustrated
 
-
 <img src="./assets/all_stream2.png" alt="streams"  style="width:500px;">
-
 
 ---
 layout: center
 ---
-
 
 # Streams Illustrated
 
@@ -1078,40 +728,24 @@ layout: center
 <img src="./assets/all_stream4.png" alt="streams"  style="width:500px;">
 
 
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # KurrentDB Internals: Streams and Events
-
-
-
 
 * An Event is part of a stream 
 * An Event is an entry in a global log known as the $all stream 
 * A stream is a subset of the $all stream
 * The index contains information on which events are in which stream
 
-
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # KurrentDB Optimizations
 
-
-
-
 **General Considerations**
-
-
 
 * Durability (Crash tolerance)
 * Disk access patterns
@@ -1126,53 +760,35 @@ The main point is that the append only log is sequential write, and the structur
 The LSM structure was designed for these issues
 -->
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # KurrentDB Optimizations
 
-
-
-
-
 KurrentDB has the following design features: 
-
 
 * Pre-allocated append-only log that enables high throughput and sequential writes 
 * Log-structured merge-tree(LSM) for high write capacity for the additional data storage (stream indexes)
-
-
 
 
 <!-- The pre-allocated log avoids fragmentation, favoring sequential reads 
 * It is beyond the scope of this course to go into details of LSM’s, but RocksDB is a widely used system, that also makes use of LSM’s https://rocksdb.org/
 * And this site is useful, https://disc-projects.bu.edu/compactionary/index.html, and this animation is great https://disc-projects.bu.edu/compactionary/research.html -->
 
-
-
 ---
 layout: section
 ---
-
-
 
 # Event Details
 
 ##
 
 ---
-layout: main_full
+layout: main-full
 ---
 
-
 # Event Details:
-
-
-
 
 * **Type**: A string, defined by the application
 * **Stream**: The stream the event belongs to
@@ -1180,22 +796,11 @@ layout: main_full
 * **Revision**: A number representing the position in the specific stream this event is part of.
 * **Data**: A ByteArray of application generated data (often JSON formatted)
 
-
-
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Event Details
-
-
-
-
 
 * **Metadata**: A ByteArray of user or system generated metadata
     * **System metadata**
@@ -1206,25 +811,11 @@ layout: main_full
         * **CausationId**: supplied by the application
 
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
  
-
-
-
-
-
-
-
 # Event Details
-
-
-
 
 * **Event ID**: (GUID) can be used for deduplication when appending data to the store
 * **Revision #**: Typically used for optimistic locking
@@ -1232,36 +823,22 @@ layout: main_full
 * **Revision & positions**: Are strictly increasing in their respective streams
     * These numbers are managed by the Event Store server only.
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Properties of an Event
-
-
 
 
 **Immutable**: Once an event is written it can not be modified
 
 **Guaranteed Order**: The ordering of events is global across all events and streams in the database
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 --- 
 
-
-
 # Event Example: Support Ticket
-
-
-
 
 
 |No | Stream | Type | Timestamp| 
@@ -1285,67 +862,44 @@ Metadata:
 EventId:	46765067-5067-5067-5067-173646765067
 
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Deleting Events
 
 Event deletion occurs when:
-
 
 * Event is older than $maxAge stream setting
 * Event violates $maxCount stream setting
 * The stream itself is deleted
 
 
-
-
 ---
 layout: section
 ---
 
- 
-
 # Reading Streams
 
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Reading Streams
-
-
-
 
 The following options are availalbe when reading a stream:
-
-
 
 * Read forward 
 * Read backward
 * Read n number of events
 * Start reading from any position in the stream
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Reading streams: example code
 
-
-
-
 Starting from a particular location, reading backwards, limit 100 events
-
 
 ```
 events = client.get_stream(
@@ -1358,90 +912,61 @@ events = client.get_stream(
 
 ```
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Reading the $all stream
-
-
-
 
 When reading from the $all stream, you must provide byteoffset of the event instead of event number
 
 
-
-
+```python
 event_all = client.read_all(commit_position=955159)
 
 for event in event_all:
      # Doing something productive with the event
      print(f"Event: {event}")
 
-
-
-
+```
 
 ---
 layout: section
 ---
 
-
-
 # Database Configuration 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Configuration Sources
-
-
-
 
 * Configuration file
 * Command line
 * Environment variables
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Configuration Precedence
-
-
 
 1 - Command line options
 2 - Environment variables
 3 - Configuration files (YAML and JSON)
 
 
-
-
 This order of precedence allows for flexible configuration management, where you can set default values in configuration files, override them with environment variables if needed, and use command line options for the highest priority settings.
 
 
 
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Common Configuration Options
-
-
 
 
 
@@ -1451,17 +976,11 @@ layout: main_full
 * [**ClusterDns**](https://developers.eventstore.com/server/v24.10/configuration/cluster.html#cluster-with-dns): The DNS discovery endpoint (when DNS discovery is enabled)
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Common Configuration Options
-
-
-
 
 **IP / Hostname settings**
 
@@ -1472,16 +991,11 @@ layout: main_full
 * **AdvertiseHostToClientAs**: The hostname to advertise the node as on the client gossip endpoint. This is usually used when clients are connecting behind a NAT or set to match the node’s hostname when using certificates.
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Common Configuration Options
-
-
 
 
 * [**Log rotation**](https://developers.eventstore.com/server/v24.6/diagnostics/logs.html#log-file-interval) (LogFileSize, LogFileInterval, LogFileRetentionCount)
@@ -1492,17 +1006,11 @@ layout: main_full
     * StartStandardProjections - whether to start the built-in system projections
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Commonly used configuration options
-
-
 
 
 * [SkipIndexVerify](https://developers.eventstore.com/server/v24.10/configuration/indexes.html#skip-index-verification)
@@ -1512,18 +1020,9 @@ layout: main_full
 * [EnableExternalTcp](https://developers.eventstore.com/server/v24.10/configuration/networking.html#external-tcp)
 * Timeout settings
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
-
-<!-- _footer: 
- -->
-![bg](../themes/media/section-divider-green.png)
 
 
 # Lab: Install KurrentDB
@@ -1531,22 +1030,15 @@ layout: main_full
 
 ## See the labs folder on the desktop
 
-
 ---
-layout: main_full
+layout: lab
 ---
-
 
 # Lab: Install KurrentDB
 
-
-
-
 Please open
-`lab_install_esdb`
+"lab_install_esdb"
 in your Labs folder.
-
-
 
 
 Lab Summary: 
@@ -1556,53 +1048,35 @@ Lab Summary:
 2. Append an event using the Webui
 
 
-
-
-
 ---
 layout: intro
 ---
 
-   
+# Stream Metadata
 
-# Truncating, Deleting, and Configuring Streams
-
-## 
+ 
 
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Configuration Options
-
-
-
 
 **Streams can be configured to:**
 * Only return x number of events by setting $maxCount
 * Only return the most recent events by setting $maxAge
  
-
 It is important to note that events will persist in the $all stream until a scavenge operation rewrites the log. Scavenge is covered later in the course. 
-
 
 **Streams can be Deleted**
 * [Soft Delete](https://developers.eventstore.com/clients/grpc/delete-stream.html#soft-delete): Truncates the stream allowing future event appends to that stream
 * [Hard Delete](https://developers.eventstore.com/clients/grpc/delete-stream.html#hard-delete) ("Tombstone"): Permanently removes a stream and its events. When a stream is hard deleted, you cannot reuse the stream name, it will raise an exception if you try to append to it again. 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Stream Configuration Internals
-
-
-
 
 Streams are configured by appending an event to the `$$` system stream
 * \$\$ streams are hard coded to return only a single event
@@ -1612,28 +1086,19 @@ Streams are configured by appending an event to the `$$` system stream
     * $maxCount
     * Access Control Configuration
 
-
-
-
 ---
 layout: intro
 ---
-
-   
 
 # Subscriptions
 
 ##
 
 ---
-layout: main_full
+layout: main-full
 ---
 
-
 # Subscriptions
-
-
-
 
 Clients can subscribe to a stream and receive newly appended events as they arrive.
 
@@ -1646,46 +1111,30 @@ Supported Features of subscriptions include:
     * Application tracks progress (manages state)
 
 
-
-
 ---
 layout: intro
 ---
-
- 
 
 # Projections
 
 ##
 
 ---
-layout: main_full
+layout: main-full
 ---
 
-
 # Projections
-
-
-
 
 KurrentDB supports two types of projections:
 
 * System Projections
 * User Defined Projections
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # System Projections
-
-
-
 
 KurrentDB has a  projections subsystem that lets you append new events or link existing events to streams in a reactive manner. Projections require the event body to be in JSON.
 
@@ -1696,20 +1145,11 @@ Available projections include:
 * Stream by Category ($stream_by_category)
 * Streams ($streams)
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection by Category ($by_category)
-
-
-
-
 
 Events appended into following streams:
 * usa-customer1
@@ -1718,37 +1158,21 @@ Events appended into following streams:
 Would be projected into the stream:
 * $ce-usa
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection by Event Type ($by_event_type)
-
-
-
 
 
 Events with the event type "SALE" appended into any stream  would be projected into the stream $et-SALE.
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection by Correlation ID ($by_correlation_id)
-
-
-
-
-
 
 Events sharing a $correlationID value "X" in the event metadata that are appended into any stream would be projected into the stream $bc-X.
 
@@ -1760,20 +1184,11 @@ The projection takes one parameter, a JSON string as a projection source:
 }
 ```
 
-
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection Stream by Category ($by_category)
-
-
-
 
 
 The [stream by category](https://developers.eventstore.com/server/v24.10/features/projections/system.html#stream-by-category) projection links existing events from streams to a new stream with a $category prefix by splitting a stream id by a configurable separator.
@@ -1781,50 +1196,30 @@ The [stream by category](https://developers.eventstore.com/server/v24.10/feature
 The separator as well as where to split the stream id are configurable.
 
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Streams Projection ($streams)
-
-
-
-
 
 This projection links existing events from streams to a stream named $streams. This will contain all events in all streams.
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # User-defined Projections
-
-
 
 
 Just like an application can manage it’s own subscription by storing the offset, an application may read events or subscribe to streams and append new events or create new streams of events based upon logic applied to the events read. 
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection API
-
-
-
 
 A projections API is available for user defined projections that offers: 
 
@@ -1835,51 +1230,38 @@ A projections API is available for user defined projections that offers:
 [See Documentation for additional information](https://developers.eventstore.com/server/v24.10/features/projections/custom.html#projections-api)
 
 
-
-
 ---
-layout: main_full
+layout: two-cols-header
 ---
 
 
 # User Defined Projections 
 
+::left::
+
+<img src="./assets/User_Projection.png" alt="projection" width="400" >
+
+::right::
+
+<img src="./assets/User_Projection2.png" alt="ouro" width="400"  >
 
 
-
-
-
-
-
-
-
-
- ---
-
+---
+layout: main-full
+---
 
 # Projection Modes
-
-
-
 
 * Continuous: Continues running after reaching the end of the stream. 
 * Onetime: Runs until the end of the stream and stops. Can be re-run later.
 * Query: Transient queries which will run until the end of the stream, write a result, and then be deleted after a period of time.
 
 
-
-<!--Course will focus on continous projection mode.
--->
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection Configurations
-
-
-
 
 EmitEnabled: 
 * Allows projection to write events
@@ -1888,27 +1270,24 @@ TrackEmittedStreams:
 * Cleans up emitted streams when projection is deleted
 * Causes write amplification (use with care)
 
+---
+layout: main-full
+---
+
+# Projection Configurations
+
 MaxAllowedWritesInFlight:
 * Projection can write to multiple streams at the same time
 * By default: 
     * Number of concurrent write requests is unbounded 
     * Projection writes as fast as possible
     * Use for fan out projections with write pressure on the node
-
         
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Projection Configurations
-
-
 
 
 CheckpointAfterMs
@@ -1919,19 +1298,11 @@ CheckpointAfterMs
     * Especially if projection status is often in "CheckpointRequested"
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Projection Metadata
-
-
-
 
 
 * Projections add metadata to each event they emit
@@ -1944,16 +1315,11 @@ layout: main_full
     * If metadata is missing or does not match, then the projection faults
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection Status
-
-
 
 
 * Checkpoint Requested
@@ -1968,39 +1334,24 @@ layout: main_full
     * The projection is stopping.
     * Includes writing a checkpoint and clearing state.
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Projection Status
-
-
-
-
 
 * Stopped
     * The projection is disabled. The projection must be enabled to restart.
 * Faulted
     * The projection experienced an error. A status message should describe the failure.
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
 
+# Projection Pitfalls:
 
-# Projection Pitfalls
-
-
-
-
-**Write amplification**
+Write amplification
 
 * Projections write events for:
     * Emitted events
@@ -2015,16 +1366,12 @@ layout: main_full
     * Scavenge regularly
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Projection Pitfalls
-
-
 
 
 **Projections only run on Leader**
@@ -2041,17 +1388,12 @@ layout: main_full
 * Slow projection may impact a faster projection if they share the same thread.
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Projection Configuration
-
-
 
 
 * **Dev:** dev mode enables and starts system projections by default.
@@ -2059,38 +1401,20 @@ layout: main_full
 * **RunProjections=All:** Enables both system projections and user projections.
 * **StartStandardProjections:** Starts system projections
 
-
-
-
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # Questions?
-
-
 
 
 Please take this time to ask any questions you may have. 
 
 
-
-
 ---
-layout: main_full
+layout: lab
 ---
 
-
-
-<!-- _footer: 
- -->
-![bg](../themes/media/section-divider-green.png)
 
 
 # Lab: Exploring the Projection Engine
@@ -2099,13 +1423,11 @@ layout: main_full
 ## 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Lab Summary
-
-
 
 
 In this lab you will use the webui and:
@@ -2120,9 +1442,6 @@ Please open
 in your Labs folder
 
 
-
-
-
 ---
 layout: intro
 ---
@@ -2134,13 +1453,10 @@ layout: intro
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
-
 # Storage on Disk
-
-
 
 Database Disk Files
 
@@ -2149,23 +1465,12 @@ Database Disk Files
 * Scavenge Data
 
 
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 
 # KurrentDB Disk Use
-
- 
-
-
-
-
-
 
  
 
@@ -2180,46 +1485,36 @@ All chunks are immutable (read only) except the last chunk, which is append only
 (Demo)
 
 
-
-
-<!--
-This content is VERY similar to content in day2
-Sort that out !!
--->
-
 ---
-layout: main_full
+layout: center
 ---
 
+<img src="./assets/ESDB_on_disk.png" alt="dashboad" width="500" >
 
 
-
+---
+layout: main-full
+---
 
 # Data Directory
 
 
+---
+layout: center
+---
 
+# Data Directory
 
-
-
+<img src="./assets/Data_directory.png" alt="dashboad" width="1000" >
 
 
 ---
-layout: main_full
+layout: main-full
 ---
-
-
 
 # KurrentDB Disk Use
 
- 
 
-
-
-
-
-
- 
 
 **Transaction Log**
 
@@ -2234,19 +1529,12 @@ layout: main_full
     * The index and scavenge info is derived from this and can be regenerated.
 
 
-
-
-
-
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 
 # Transaction Log
-
- 
 
 **Physically**
 
@@ -2258,24 +1546,11 @@ layout: main_full
 (Demo)
 
 
-
-
-
- 
-
-
-
-
-
-
-
 ---
-layout: main_full
+layout: two-cols
 ---
-
 
 # Chunk Naming (no scavenge)
-
 
 
 **chunk-XXXXXX.YYYYYY**
@@ -2284,24 +1559,16 @@ layout: main_full
 * Y is zero
 * Scavenging will make this more complicated
 
+::right::
 
-
-
-
-
-
-
-
-
+<img src="./assets/Chunk_no_scavenge.png" alt="dashboad" width="200" >
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Index
-
-
 
 
 **Purpose: Finding Events in a Stream.**
@@ -2320,15 +1587,12 @@ layout: main_full
 
 
 
-
-
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Index Map File
-
 
 
 
@@ -2340,16 +1604,12 @@ layout: main_full
 
 
 
-
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # PTable Internals
-
-
-
 
 
 
@@ -2361,16 +1621,12 @@ layout: main_full
 
 
 
-
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Index 
-
-
-
 
 
 **PTable Bloom Filters**
@@ -2390,14 +1646,10 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 --- 
 
-
-
 # Scavenge
-
-
 
 
 **scavenge.db**
@@ -2407,17 +1659,9 @@ layout: main_full
 * More on scavenge in later section.
 
 
-
-
 ---
-layout: main_full
+layout: lab
 ---
-
-
-
-<!-- _footer: 
- -->
-![bg](../themes/media/section-divider-green.png)
 
 
 # Lab: Files Used by KurrentDB
@@ -2427,7 +1671,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2460,14 +1704,11 @@ layout: intro
 ## 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Cluster Review
-
-
-
 
 
 * Typically a 3 Node Cluster
@@ -2477,25 +1718,29 @@ layout: main_full
     * Write Acknowledgement to Client
 * Follower
     * Replicates Write from Reader
-* Read Only Replica
-    * Is not part of the cluster
-    * Does not participate in quorum activities
-    * Leader Elections
-    * Accepting writes
-    * Simply Replicates writes from the leader
-    * For serving reads
-    * For a kind of continuous backup
+
+
 
 
 <!-- All of this needs to be spit out
 into single node and multi node
 Leaving for now -->
+---
+layout: main-full
+---
 
+#  Read Only Replica
 
-
+* Is not part of the cluster
+* Does not participate in quorum activities
+* Leader Elections
+* Accepting writes
+* Simply Replicates writes from the leader
+* For serving reads
+* For a kind of continuous backup
 
 ---
-layout: main_full
+layout: two-cols
 ---
 
 
@@ -2508,6 +1753,9 @@ layout: main_full
 
 * All nodes connect to the leader node on port 1112 for Log Replication. TCP is used directly.
 
+::right::
+
+<img src="./assets/3node_cluster_commication_during_write.png" alt="ouro" width="300" >
 
 
 
@@ -2516,7 +1764,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2535,7 +1783,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2554,7 +1802,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2565,7 +1813,11 @@ layout: main_full
 
 
 
+---
+layout: center
+---
 
+<img src="./assets/write_to_leader.png" alt="projection" width="500" >
 
 
 
@@ -2583,7 +1835,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
  
@@ -2609,7 +1861,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2639,7 +1891,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2655,13 +1907,19 @@ layout: main_full
 
 
 
+---
+layout: center
+---
 
+# Write to log
+
+<img src="./assets/write_to_log.png" alt="ouro" width="400"  >
 
 
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
  
@@ -2682,12 +1940,17 @@ layout: main_full
 
 
  
- 
+---
+layout: center
+---
+
+# Replicate the write
+<img src="./assets/replicate_the_write.png" alt="replicate" width="500" >
  
  
  
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2710,7 +1973,7 @@ layout: main_full
  
  
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2741,7 +2004,7 @@ layout: intro
 ## 
 
 ---
-layout: main_full
+layout: two-cols
 ---
 
 
@@ -2757,7 +2020,9 @@ layout: main_full
 * IsLeaderRequired
 * Distributes the read to one of the reader queues
 
+::right::
 
+<img src="./assets/read_path_all_reads.png" alt="ouro" width="500"  >
 
 
 
@@ -2765,7 +2030,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2788,7 +2053,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
  
 
@@ -2808,11 +2073,17 @@ MainStage
 * IsLeaderRequired
 * Distributes the read to one of the reader queues
 
+---
+layout: center
+---
 
+# Stream Reads
+
+<img src="./assets/read_path_streams.png" alt="projection" width="500" >
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2832,7 +2103,7 @@ Reader Worker
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2845,7 +2116,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2874,13 +2145,11 @@ layout: intro
 ## 
 
 ---
-layout: main_full
+layout: two-cols
 ---
 
 
 # System Streams Overview
-
-
 
 
 KurrentDB uses Streams internally to manage permissions and configuration settings. 
@@ -2891,12 +2160,13 @@ System Streams:
 * Can be modified by the server automatically
 * Can be modified by the user
 
+::right::
 
-
+<img src="./assets/webui_system_streams.png" alt="webui" width="600"  >
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2917,7 +2187,7 @@ Rquirements:
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2936,7 +2206,7 @@ This screenshot is from a freshly started cluster. A long running cluster will h
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -2957,7 +2227,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: center
 ---
 
 
@@ -2965,7 +2235,7 @@ layout: main_full
 # Disable/Enable Projections
 
 
-
+<img src="./assets/webui_system_streams2.png" alt="projection" width="1000" >
 
 
 
@@ -2973,7 +2243,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: center
 ---
 
  
@@ -2983,14 +2253,14 @@ layout: main_full
 View of the ```$projections-$by_category```  after a few Enable/Disable changes. 
 
 
-
+<img src="./assets/webui_system_streams3.png" alt="projection" width="1000" >
 
 
 
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -3022,7 +2292,7 @@ layout: intro
 ## 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
@@ -3046,13 +2316,11 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
 
 # Stream Metadata Demo
-
-
 
 
 The instructor will demonstrate using the webui. 
@@ -3066,14 +2334,9 @@ The instructor will demonstrate using the webui.
 
 
 ---
-layout: main_full
+layout: main-full
 ---
 
-
-
-<!-- _footer: 
- -->
-![bg](../themes/media/section-divider-green.png)
 
 
 # Lab: Modify Acccess Control List for a Stream
@@ -3082,7 +2345,7 @@ layout: main_full
 
 
 ---
-layout: main_full
+layout: lab
 ---
 
 
@@ -3109,17 +2372,13 @@ in your Labs folder.
 
 
 ---
-layout: main_full
+layout: main-full
 ---
-
 
 # Congratulations
 
 
-
-
 **You know know how to:**
-
 
 
 
@@ -3130,9 +2389,556 @@ layout: main_full
 * Use the EventStorDB webui
 
 
+---
+layout: section
+---
+# In this Section You Will Learn How To:
+
+++++I ADDED BELOW+++
+
+* Use the following tools 
+    * Webui
+    * es-cli
+    * http-api
+* Perform Basic Backup and Restore
+* Leverage Projections
+* Use Subscriptions 
+* Run an EventStore based application   
+
+---
+layout: main-full
+---
+
+# Outline
+
+* ESDB TOOLBOX
+    * Webui
+    * es-cli
+    * http-api
+* Lab webui
+* Lab es-cli
+* Lab http api
+* Backup and Restore 
+    * Storage on Disk
+    * Backup Process
+    * Lab Backup and Restore
+* Projections  and Subscriptions
+
+---
+layout: section
+---
+
+# ESDB Toolbox
+
+##
+
+---
+layout: main-full
+---
+
+# EventStoreDB Webui
+
+* Built in to the server product
+* Navigator
+    * Currently under development replacement for Webui
+
+
+---
+layout: main-full
+---
+
+# Webui: Dashboard
+
+
+**EventStoreDB is architected using a Staged Event Driven Architecture (SEDA)**
+
+<!-- ADD BACK LATER
+[SEDA definition](https://en.wikipedia.org/wiki/Staged_event-driven_architecture)
+-->
+
+The Webui Dashboard Tab Shows Internal Status:
+
+* Main Queue
+    * Read/Write requests start here
+* Storage Reader Queue
+    * Read Requests Handled here
+* Storage Writer Queue
+    * Write requests Handled here      
 
 
 
 ---
-layout: main_full
+layout: main-full
+---
+
+# Webui Features: Dashboard
+
+
+<img src="./media/Dashboard_Annotated.png" alt="dashboad" width="1000" >
+
+---
+layout: main-full
+---
+
+# Webui Features: Stream Browser
+
+
+**The Stream Browser tab provides an interface to view and create events in Streams.**
+
+With the Stream Browser tab you can:
+* Create Events/Streams
+* Read Events from Streams
+* Set or view Stream Metadata
+    * ACL's
+    * maxAge
+    * maxCount
+
+
+---
+layout: main-full
+---
+ 
+# Webui Features: Stream Browser
+
+<img src="./media/Stream_Browser_annotated.png" alt="dashboad" width="1000" >
+
+
+---
+layout: main-full
+---
+
+
+# Stream Browser: Detail view
+
+
+
+<img src="./media/Stream_browser_detail.png" alt="dashboad" width="1000" >
+
+
+---
+layout: main-full
+---
+
+# Stream Browser: Event View
+
+<img src="./media/Stream_Browser_Event_view.png" alt="dashboad" width="1000" >
+
+
+---
+layout: main-full
+---
+ 
+# Stream Browser: Manage Metadata
+
+
+<img src="./media/Stream_Browser_metadata.png" alt="dashboad" width="1000" >
+
+
+---
+layout: main-full
+---
+ 
+# Stream Browser: Admin
+
+<img src="./media/Admin_annotated.png" alt="dashboad" width="1000" >
+
+
+---
+layout: main-full
+---
+
+# Stream Browser: Projections
+
+<img src="./media/Projections_annotated.png" alt="dashboad" width="1000" >
+
+
+
+---
+layout: main-full
+---
+
+# Stream Browser: Visualize
+
+<img src="./media/Visualize_annotated.png" alt="dashboad" width="1000" >
+
+
+---
+layout: main-full
+---
+
+# Stream Browser: Persistent Subscriptions
+
+
+The Subscription Tab allows you to view the status of Subscriptions.
+
+<img src="./media/Persistent_subscriptions_annotated.png" alt="dashboad" width="1000" >
+
+
+---
+layout: section
+---
+
+
+# es-cli
+
+## 
+
+---
+layout: main-full
+---
+
+# EventStoreDB es-cli
+
+
+EventStoreDB provides a command line tool to interact with EventStoreDB. 
+
+This section will describe how to use some of the most commonly used features of the EventStoreDB command line tool es-cli. 
+
+
+---
+layout: main-full
+---
+
+
+# es-cli
+
+
+Command line tool providing ability to:
+• Add users
+• Shutdown server
+• List users
+<br/>
+
+[See documentation for more info](https://developers.eventstore.com/commercial-tools/cli-tool.html#commands)
+
+
+---
+layout: main-full
+---
+
+# Authentication
+
+
+Authentication credentials can be passed on the command line, or stored in a configuration file. 
+
+**Command Line**
+
+```
+es-cli --serverurl="http://localhost:2113" 
+     --username=admin --password=changeit
+```
+
+**Configuration File**
+
+windows path: ```%AppData%/eventstore.rc```
+linux/Mac path: ```~/.eventstorerc```
+
+
+
+
+---
+layout: main-full
+--- 
+
+# Configuration File Format
+
+
+**Below is an example of the format of an example es-cli configuration file.**
+
+```
+serverurl="http://127.0.0.1:2113"
+username="admin"
+password="changeit"
+output="json" # Or XML
+verbose=true # Or false
+```
+
+---
+layout: main-full
+---
+
+# Available es-cli Commands
+
+Admin: 
+
+```
+scavenge, shutdown, merge_indexes,
+calculate_stream_size, backup, restore, s3_backup,s3_restore, azure_backup, azure_restore,
+verify_db, clear_scavenge_streams, delete_streams
+```
+<br/>
+user:
+
+```
+add, change_password, delete, disable, update, enable, list, reset_password
+```
+
+---
+layout: main-full
+---
+ 
+# Available es-cli Commands
+
+
+Projections: 
+```
+delete, disable, enable, list, new, result, state, status, restore_checkpoint, has_stalled
+```
+
+<br/>Subscriptions:
+```
+list, create, update
+```
+
+<br/>config_generator:
+```
+create_config
+```
+
+---
+layout: main-full
+---
+
+
+# Backing up a Database
+
+
+* es-cli admin backup
+    * initiates a backup to provided destination directory
+<br/>
+* es-cli admin azure_backup/s3_backup
+    * initates backup to cloud storage
+<br/>
+* options
+    * -databasesource
+    * -databasedestination
+    * -indexsource
+    * -indexdestination
+    * -differential
+    * -deleteextra
+
+
+---
+layout: main-full
+---
+ 
+
+<!-- style: td { white-space: nowrap; } --> 
+
+# Restore a Database
+
+es-cli admin restore [options]
+
+<!-- | Option               |Description                                                               |
+|---------------------|---------------------------------------------------------------------------|
+| -databasesource      | The location of the backup to restore                                     |
+| -databasedestination | The destination of the restore                                            |
+| -indexsource         | The location of the index backup (default: databasesource/index)          |
+| -indexdestination    | The destination of the index restore (default: databasedestination/index) |
+| -y                   | Automatic yes to prompts to delete files from destination directory       | -->
+
+
+---
+layout: main-full
+---
+
+# Deleting Streams
+
+es-cli admin delete_streams [options]
+
+<!-- | Option       | Description                                                    |
+|--------------|----------------------------------------------------------------|
+| -pattern     | Regular expression that the streams must match                 |
+| -list        | Only list the streams matching the pattern, do not delete them |
+| -fromall     | Force read stream names from $all                              |
+| -fromstreams | Force read stream names from $streams                          |
+| -noverify    | Does not verify if the stream exists (faster)                  |
+|              | USE THE FOLLOWING OPTIONS WITH CAUTION!                        |
+| -hard        | Hard delete the streams (Default: soft delete)                 |
+| -system      | Include system streams (starting with $) for deletion          | -->
+
+---
+layout: main-full
+---
+
+# Managing Users
+
+<!-- es-cli user [--version] [--help] <command> [args]
+<br/>
+| Command         | Description              |
+|-----------------|--------------------------|
+| add             | Add a user               |
+| change_password | Change the user password |
+| delete          | Delete a user            |
+| disable         | Disable a user           |
+| enable          | Enable a user            |
+ 
+ -->
+
+---
+layout: main-full
+---
+
+# Managing Users
+
+
+<!-- es-cli user [--version] [--help] <command> [<args>] -->
+<br/>
+<!-- | Command         | Description              |
+|-----------------|--------------------------|
+| list            | List all users           |
+| reset_password  | Reset a user's password  |
+| update          | Update a user            |
+| Command         | Description              | -->
+
+
+---
+layout: main-full
+---
+
+# Projections
+
+Delete a projection:
+
+<br/>```es-cli projections delete [options]```
+
+<br/>Disable a projection:
+
+<br/>```es-cli projections disable [options]```
+
+<br/>Enable a projection:
+
+<br/>```es-cli projections enable [options]```
+
+
+---
+layout: main-full
+---
+
+# Projections
+
+
+List all  projections:
+
+<br/>```es-cli projections list [options]```
+
+<br/>Create a new projection.
+
+<br/>```es-cli projections new [options]```
+
+<br/>Get the result of a projection:
+
+<br/>```es-cli projections result [options]```
+
+
+---
+layout: main-full
+---
+
+<!-- _class: cover -->
+<!-- _paginate: false -->
+<!-- _header: 
+ -->
+<!-- _footer: '![eventstore](../themes/media/eventstore-inverse.png)' --> 
+
+![bg](../themes/media/background-darkblue.png) 
+
+# http api 
+
+##
+
+---
+layout: main-full
+---
+
+# http API
+
+
+The EventStoreDB http api enables both Admin and user operations using http requests. 
+
+This allows scripting of functionality allowing users to write scripts to manage users, configure stream permissions, and automate operations. 
+
+
+---
+layout: main-full
+---
+
+# http api
+
+
+* General Features
+    *  Append events
+    * Read streams
+* Admin Features
+    * Set stream permissions
+    * Add user
+    * Start scavenge
+* There are more
+    * See EventStoreDB_http_endpoints.html in your course content
+
+
+<!-- Instructor Note, 
+The file in the courseware repo, 
+applied_course/EventStoreDB_http_endpoints.html
+Has a longer, although not complete list. -->
+
+---
+layout: lab
+---
+
+
+
+![bg](../themes/media/section-divider-green.png)
+
+
+
+# Lab: Using the EventstoreDB webui
+
+---
+layout: main-full
+---
+
+# Lab Instructions
+
+Open 
+`lab_webui.pdf`
+in your Labs folder 
+
+
+---
+layout: lab
+---
+
+# Lab: Using es-cli
+
+---
+layout: main-full
+---
+
+
+# Lab Instructions
+
+
+Open 
+`lab_using_es-cli.pdf`
+in your Labs folder 
+
+
+---
+layout: lab
+---
+
+# Lab: Using http api
+
+
+---
+
+# Lab Instructions
+
+
+Please open
+`lab_http.pdf`
+in your Labs folder
+
+
 ---

@@ -2,6 +2,10 @@
   /* default theme color */
   /* can be overrided by uses `themeConfig` option */
   --slidev-theme-primary: #5d8392;
+  ul {
+    list-style: disc;
+  }
+
 }
 
 .slidev-layout.cover,
@@ -73,7 +77,7 @@ MAIN CONTENT SLIDE FULL CSS
 
 ********************/
 
-.slidev-layout.main_full {
+.slidev-layout.main-full {
   @apply h-full grid;
   background-image: url("../assets/content_background_full.svg");
   background-size: cover;
@@ -127,7 +131,7 @@ Header + two-columns
   /*
   background-image: url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg");
   */
-  background-image: url("../assets/intro_background.svg");
+  background-image: url("../assets/content_background_plum.svg");
   background-size: cover;
 
   /*
@@ -165,4 +169,32 @@ Header + two-columns
   background-size: cover;
 
 
+}
+
+/* ##########
+# lab css
+#
+############ */
+.slidev-layout.lab {
+  color: #ded9ff;
+  @apply h-full grid;
+  background-image: url("../assets/content_background_lab.svg");
+  background-size: cover;
+
+
+  h1 {
+    @apply text-6xl leading-20;
+    
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+   
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
 }
