@@ -7,25 +7,22 @@ fonts:
   serif: Robot Slab
   # for code blocks, inline code, etc.
   mono: Fira Code
----
-
----
 layout: cover
 ---
 
-# KurrentDB Overview
+# KurrentDB 
+# Foundations
+
 
 ---
 layout: main-full
 ---
 
-# In This Section You Will Learn how to:
+# Table of Contents:
 
-* Differentiate the unique functionality of KurrentDB from other systems
-* Install KurrentDB from a binary distribution
-* Add events to KurrentDB streams
-* Configure stream settings to delete old events
-* Use the EventStorDB webui
+1. KurrentDB Overview
+2. KurrentDB comparison to other systems
+
 
 
 ---
@@ -74,244 +71,21 @@ layout: main-full
 * Lab: Modify stream access control List
 * Lab (optional): Stress test the server 
 
-
 ---
-layout: section
----
-
-# KurrentDB Overview
-
-## 
-
----
-layout: main-full
+src: ./pages/overview.md 
 ---
 
-# KurrentDB
+# INCLUDE POINTER TO OVERVIEW CONTENT
+# THIS IS NOT DISPLAYED
 
-**Designed for event-native applications, KurrentDB immutably stores every event to provide:**  
-
-* Context rich business data 
-* Decoupled complex systems 
-* Increased scalability and flexibility
-* Contextual, real-time insights
-* Future proofed architecture
-
----
-layout: main-full
----
-
-# KurrentDB Server: Deployment Options
-
-**KurrentDB**
-
-* Compatible with Docker, Linux, Windows
-* Open Source and free to use
-    * As of 24.10, [ESLv2 license model](https://www.eventstore.com/blog/introducing-event-store-license-v2-eslv2)
-* Enterprise Offerings
-* Self-managed on-prem or cloud
-
----
-layout: main-full
----
-
-# KurrentDB Cloud 
-
-* AWS, Azure, Google
-* Security and Compliance
-* Scalability and High Availability
-* Managed Service
 
 
 ---
-layout: main-full
+src: ./pages/comparison.md 
 ---
 
-# KurrentDB Clients
-
-**GRPC based clients**
-
-* Node.js
-* .NET
-* Java
-* Python
-* Rust
-* Go
-
----
-layout: main-full
----
- 
-# HTTP API 
-
-* Read/Write events
-* Admin functions
-* Add users/groups
-* Enable/Disable features
-* Retrieve logs/metrics
-
----
-layout: main-full
----
-
-# KurrentDB
-
-**Builds Data Immutability**
-KurrentDB stores data as a series of immutable events over time to provide for greater data integrity and transparency.
-
-**Decouples Core Logic**
-With KurrentDB you can decouple your external systems with asynchronous messaging making your system cleaner and more compact.
-
-**Creates a Source of Truth**
-Events in KurrentDB are stored as a reliable log of the changes in your application. 
-
-
----
-layout: section
----
-
-    
-
-# Comparing KurrentDB 
-# to Other Systems
-
-## 
-
----
-layout: main-full
----
-
-# Key Concepts
-
-When using any database (SQL, Document, NoSQL, or KurrentDB), its critical to understand the tools available to: 
-
-* Manage potential conflicts between multiple readers and writers
-* Enforce constraints
-* Retrieve data or subsets of data
-* Deletion process
-
-This section discusses those concepts and compares KurrentDB to other types of databases.   
-
----
-layout: main-full
----
-
-# How Data is Stored
-
-Some systems store data as a document that can be read and rewritten as a new version. Others store data as a table with a collection of rows containing typed columns. 
-
-This section breaks down the topic into:
-
-* Unit of storage
-* Available operations
-* Schemas
-* Pub-sub functionality
-
----
-layout: main-full
----
-
-# KurrentDB: Unit of Data Storage
-
-**Comparing databases and their basic units of storage**
-
-
-| Database Type | Base Unit of Storage| 
-|---------------|---------------------|
-|Relational database (MySQL, Postgres, Oracle)|Rows
-|Document store(MongoDB, Cosmos)|Documents
-|Data lake |Combination of documents and rows
-|KurrentDB| Events |
-
-
----
-layout: main-full
----
-
-# Event Details
-
-* Appended in order to a stream
-* Immutable
-
----
-layout: main-full
----
-
-# Comparison by Supported Operations
-
-
-Some systems allow granular updates/deletes.  Others group data into subsets and allow granular updates/deletes on those subsets. 
-
-Some systems allow updates of previously written data in place.  Others replace the previous version with a new version containing the update/delete.
-
-The following slide(s) summarize those differences
-
-
-<!-- Instructor Note
-This is key to enabling proper understanding and use of KurrentDB, certain classes may already understand the differences, but it is critical to have a baseline understanding, go as deep or as shallow as the class requires  -->
-
----
-layout: main-full
----
-
-
-# Overview of KurrentDB, Supported Operations
-
-
-| Database Type| Supported Operations |
-|--------------|----------------------|
-|Relational database (MySQL, Postgres, Oracle)|Create, Read, Update, Delete (rows)|
-|Document store (MongoDB, Cosmos)|Create, Read, Update, Delete (documents) |
-|Data lake |Create, Read, Update, Delete (combination)|
-|KurrentDB|Create(append), Read, Delete* (events)|
-
-
----
-layout: main-full
----
-
-# Schemas
-
-**Systems that enforce schemas on write**
-
-* Relational databases
-
-**Systems that define schema on read**
-
-* Data Lakes *(Typically SQL layers over semi-structured distributed storage)* 
-
-
-**KurrentDB**
-
-* KurrentDB neither manages or enforces schemas
-* Schema enforcement/management is the responsibility of the application
-
-
----
-layout: main-full
----
-
-# Reading Data
-
-|Database Type | Read Path | Subscriptions |
-|--------------|-----------|---------------|
-| Relational | Granular reads or scans/joins with filters interpreted and applied by the server | No subscriptions |
-| NoSQL | Differs per system | Differs per system |
-| KurrentDB | Read Stream/projection sequentially forwards/backwards | Subscriptions to streams/projections |
-
-
----
-layout: main-full
----
-
-# Data Transformations on Write
-
-|Database Type | Write Transformation | 
-|--------------|-----------|
-| Relational | Triggers, Stored Procedures |
-| NoSQL | Differs per system | 
-| Data Lake | Differs per system |
-| KurrentDB | Projections |
+# INCLUDE POINTER TO COMPARISON CONTENT
+# THIS IS NOT DISPLAYED
 
 
 ---
@@ -2474,7 +2248,7 @@ layout: main-full
 # Webui Features: Dashboard
 
 
-<img src="./media/Dashboard_Annotated.png" alt="dashboad" width="1000" >
+<img src="./assets/Dashboard_Annotated.png" alt="dashboard" width="800" >
 
 ---
 layout: main-full
@@ -2495,12 +2269,12 @@ With the Stream Browser tab you can:
 
 
 ---
-layout: main-full
+layout: center
 ---
  
-# Webui Features: Stream Browser
+# Webui: Stream Browser
 
-<img src="./media/Stream_Browser_annotated.png" alt="dashboad" width="1000" >
+<img src="./assets/Stream_Browser_annotated.png" alt="dashboad" width="700" >
 
 
 ---
@@ -2512,7 +2286,7 @@ layout: main-full
 
 
 
-<img src="./media/Stream_browser_detail.png" alt="dashboad" width="1000" >
+<img src="./assets/Stream_browser_detail.png" alt="dashboad" width="1000" >
 
 
 ---
@@ -2521,7 +2295,7 @@ layout: main-full
 
 # Stream Browser: Event View
 
-<img src="./media/Stream_Browser_Event_view.png" alt="dashboad" width="1000" >
+<img src="./assets/Stream_Browser_Event_view.png" alt="dashboad" width="1000" >
 
 
 ---
@@ -2531,7 +2305,7 @@ layout: main-full
 # Stream Browser: Manage Metadata
 
 
-<img src="./media/Stream_Browser_metadata.png" alt="dashboad" width="1000" >
+<img src="./assets/Stream_Browser_metadata.png" alt="dashboad" width="1000" >
 
 
 ---
@@ -2540,7 +2314,7 @@ layout: main-full
  
 # Stream Browser: Admin
 
-<img src="./media/Admin_annotated.png" alt="dashboad" width="1000" >
+<img src="./assets/Admin_annotated.png" alt="dashboard" width="700" >
 
 
 ---
@@ -2549,7 +2323,7 @@ layout: main-full
 
 # Stream Browser: Projections
 
-<img src="./media/Projections_annotated.png" alt="dashboad" width="1000" >
+<img src="./assets/Projections_annotated.png" alt="dashboard" width="1000" >
 
 
 
@@ -2559,19 +2333,17 @@ layout: main-full
 
 # Stream Browser: Visualize
 
-<img src="./media/Visualize_annotated.png" alt="dashboad" width="1000" >
+<img src="./assets/Visualize_annotated.png" alt="dashboard" width="800" >
 
 
 ---
 layout: main-full
 ---
 
-# Stream Browser: Persistent Subscriptions
+# Webui: Persistent Subscriptions
 
 
-The Subscription Tab allows you to view the status of Subscriptions.
-
-<img src="./media/Persistent_subscriptions_annotated.png" alt="dashboad" width="1000" >
+<img src="./assets/Persistent_subscriptions_annotated.png" alt="dashboad" width="700" >
 
 
 ---
@@ -2835,13 +2607,6 @@ List all  projections:
 layout: main-full
 ---
 
-<!-- _class: cover -->
-<!-- _paginate: false -->
-<!-- _header: 
- -->
-<!-- _footer: '![eventstore](../themes/media/eventstore-inverse.png)' --> 
-
-![bg](../themes/media/background-darkblue.png) 
 
 # http api 
 
@@ -2886,9 +2651,6 @@ Has a longer, although not complete list. -->
 layout: lab
 ---
 
-
-
-![bg](../themes/media/section-divider-green.png)
 
 
 
